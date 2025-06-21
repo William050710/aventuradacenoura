@@ -75,15 +75,14 @@ function preload() {
     imgSemente = loadImage("semente.png");
     imgCasa = loadImage("casa.png");
     imgAreaPlantio = loadImage("plantio.png");
-    imgArvore = loadImage("arvore.png"); // Certifique-se de ter esta imagem
+    imgArvore = loadImage("arvore.png");
     imgVendedor = loadImage("vendedor.png");
     imgLoja = loadImage("loja.png");
 
-    // --- CARREGA APENAS UMA IMAGEM PARA O BONECO ---
+    // --- IMAGEM PARA O BONECO ---
     imgBonecoPadrao = loadImage("men.png");
 
     // --- Carregamento do Som de Crescimento da Cenoura ---
-    // IMPORTANTE: Certifique-se de que o arquivo "plim_cenoura.mp3" esteja na mesma pasta do seu sketch!
     somCrescimentoCenoura = loadSound("plim_cenoura.mp3");
 }
 
@@ -106,10 +105,6 @@ function setup() {
 
     // --- POSICIONAMENTO DAS ÁRVORES: APENAS ACIMA DA ÁREA DE PLANTIO ---
     arvores = [];
-    // 5 árvores posicionadas acima da área de plantio
-    // A área de plantio começa em areaPlantioY = 120
-    // Vamos colocar as árvores em torno de Y = 50 a 100 para ficarem acima
-    // E X variando dentro da largura da área de plantio (areaPlantioX a areaPlantioX + areaPlantioLargura)
     arvores.push({ x: areaPlantioX + 20, y: areaPlantioY - 80, largura: TAMANHO_ARVORE_BASE, altura: TAMANHO_ARVORE_BASE });
     arvores.push({ x: areaPlantioX + 80, y: areaPlantioY - 70, largura: TAMANHO_ARVORE_BASE * 0.9, altura: TAMANHO_ARVORE_BASE * 0.9 });
     arvores.push({ x: areaPlantioX + 160, y: areaPlantioY - 90, largura: TAMANHO_ARVORE_BASE * 1.1, altura: TAMANHO_ARVORE_BASE * 1.1 });
